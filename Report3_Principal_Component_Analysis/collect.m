@@ -2,11 +2,11 @@
 % Thus the matrix incorporates data points of all measurement types 
 % taken by each camera over time.
 function collected_data = collect(data1, data2, data3)
-    [M,I] = min(data1(1:20,2));
+    [~,I] = min(data1(1:20,2));
     data1 = data1(I:end,:);
-    [M,I] = min(data2(1:20,2));
+    [~,I] = min(data2(1:20,2));
     data2 = data2(I:end,:);
-    [M,I] = min(data3(1:20,2));
+    [~,I] = min(data3(1:20,2));
     data3 = data3(I:end,:);
 
     % Trim the data to make them a consistent length.

@@ -1,5 +1,11 @@
+%{ 
+AMATH 482
+Professor: Craig Gin
+HW#3: Principal Component Analysis
+Jonathan Zhao
+%}
 %% Load the data (videos) for Test 1/Case 1
-clear all; close all; clc
+clear; close all; clc
 
 load('cam1_1.mat')
 load('cam2_1.mat')
@@ -47,8 +53,6 @@ plot(1:216, Y(:,1),'r','Linewidth', 2)
 ylabel("Displacement(pixels)"); xlabel("Time(frames)");
 title("Case 1 - Principal Component Projection(s)");
 legend("Principal Component1")
-
-
 
 %% Load the data for Test 2/Case 2
 clear all; close all; clc;
@@ -100,8 +104,6 @@ ylabel("Displacement(pixels)"); xlabel("Time(frames)");
 title("Case 2 - Principal Component Projection(s)");
 legend("PC1" , " PC2")
 
-
-
 %% Load the data for Test 3/Case 3
 clear all; close all; clc;
 
@@ -150,8 +152,6 @@ plot(1:235,Y(:,1),1:235,Y(:,2),1:235,Y(:,3),1:235,Y(:,4),'r','Linewidth',2)
 ylabel("Displacement(pixels)"); xlabel("Time(frames)");
 title("Case 3 - Principal Component Projection(s)");
 legend("PC1", "PC2", "PC3", "PC4")
-
-
 
 %% Load the data for Test 4/Case 4
 clear all; close all; clc;

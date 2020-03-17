@@ -1,7 +1,12 @@
-clear; close all; clc
+%{ 
+AMATH 482
+Professor: Craig Gin
+HW#4: Music Genre Classification  
+Jonathan Zhao
+%}
 
-%%
-% Song/Music by artist Ketsa (Instrumental)
+clear; close all; clc
+%% Song/Music by artist Ketsa (Instrumental)
 urls = ["https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Creative_Commons/Ketsa/Raising_Frequecy/Ketsa_-_12_-_Green_Man.mp3";
     "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Creative_Commons/Ketsa/Raising_Frequecy/Ketsa_-_11_-_Slow_Vibing.mp3";
     "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Creative_Commons/Ketsa/Raising_Frequecy/Ketsa_-_07_-_The_Stork.mp3";
@@ -25,7 +30,6 @@ end
 Ketsa_dat = wavelet_spectrogram(Ketsa_clips, Fs);
 
 %% Song/Music by artist Lately Kind of Yeah (Rock)
-
 urls = ["https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Decoder_Magazine/Lately_Kind_of_Yeah/Poindexter/Lately_Kind_of_Yeah_-_15_-_Heart_Feel.mp3";
     "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Decoder_Magazine/Lately_Kind_of_Yeah/Poindexter/Lately_Kind_of_Yeah_-_16_-_Johnny_Mathis.mp3";
     "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Decoder_Magazine/Lately_Kind_of_Yeah/Poindexter/Lately_Kind_of_Yeah_-_10_-_Tubescreamer.mp3";
@@ -151,7 +155,7 @@ for i = 1:TestNum
         err_num = err_num + 1;
     end
 end
-
+% Report the testing result
 disp('Number of mistakes')
 err_num
 disp('Rate of success');

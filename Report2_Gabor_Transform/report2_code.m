@@ -1,7 +1,7 @@
 %{ 
 AMATH 482
 Professor: Craig Gin
-HW#1: Gabor Transform
+HW#2: Gabor Transform
 Jonathan Zhao
 %}
 %% Part I - Starter Code
@@ -116,7 +116,7 @@ xlabel('Time (s)'), ylabel('Frequency (Hz)')
 colormap(hot)
 
 
-%% Part I - Using Different Gabor windows
+%% Part I - Applying Different Gabor windows
 
 vmht_spec = zeros(length(tslide), n); 
 vsht_spec = zeros(length(tslide), n);
@@ -175,8 +175,7 @@ tr_piano=length(y)/Fs; % record time in seconds
 % p8 = audioplayer(y,Fs); playblocking(p8);
 
 
-%% Part II - 1
-
+%% Part II - Produce the spectrograms of the notes
 % We first focus on the spectrogram of the song on the piano 
 % to reproduce the music notes.
 v = y';
@@ -230,7 +229,6 @@ for j = 1:length(tslide_rec)
     spec_rec(j,:) = fftshift(abs(vgrt));
 end
 
-
 figure(4)
 subplot(1,2,1)
 pcolor(tslide_p,(ks_p/(2*pi)), spec_p .'), 
@@ -248,7 +246,7 @@ xlabel('Time (s)'), ylabel('Frequency (Hz)')
 ylim ([600 1200])
 colormap(hot)
 
-%% Reproduce the music score/note on the piano
+%% Part II - Reproduce the music score/note on the piano and the recorder
 figure(5)
 subplot(1,2,1)
 plot(tslide_p, notes_piano,'o');
